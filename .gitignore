@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/rider,csharp
-# Edit at https://www.toptal.com/developers/gitignore?templates=rider,csharp
+# Created by https://www.toptal.com/developers/gitignore/api/rider,visualstudiocode,csharp
+# Edit at https://www.toptal.com/developers/gitignore?templates=rider,visualstudiocode,csharp
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -478,4 +478,17 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
-# End of https://www.toptal.com/developers/gitignore/api/rider,csharp
+### VisualStudioCode ###
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/rider,visualstudiocode,csharp
