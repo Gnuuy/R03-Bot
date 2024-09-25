@@ -2,9 +2,38 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{51240BF2-6C04-4C66-8E73-0D498F9FC2BE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messenger", "Messenger", "{890BAD49-4D1E-4EF3-BCC8-8626F5466775}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS-Messenger-Test", "MS-Messenger-Test\MS-Messenger-Test.csproj", "{58E9171F-75DE-4826-9FBA-C2E57BF3E61B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discord Consumer", "Discord Consumer", "{9373C4DD-A034-4317-A0A7-1091A5F53B58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS-Discord", "MS-Discord\MS-Discord.csproj", "{D23235F5-D87D-4DF7-94AE-2B9EE3BC42C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkModule", "TalkModule\TalkModule.csproj", "{BA30B192-0A66-4AC9-B956-85D39ECF854F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{58E9171F-75DE-4826-9FBA-C2E57BF3E61B} = {890BAD49-4D1E-4EF3-BCC8-8626F5466775}
+		{D23235F5-D87D-4DF7-94AE-2B9EE3BC42C9} = {9373C4DD-A034-4317-A0A7-1091A5F53B58}
+		{BA30B192-0A66-4AC9-B956-85D39ECF854F} = {51240BF2-6C04-4C66-8E73-0D498F9FC2BE}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58E9171F-75DE-4826-9FBA-C2E57BF3E61B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E9171F-75DE-4826-9FBA-C2E57BF3E61B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E9171F-75DE-4826-9FBA-C2E57BF3E61B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E9171F-75DE-4826-9FBA-C2E57BF3E61B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D23235F5-D87D-4DF7-94AE-2B9EE3BC42C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D23235F5-D87D-4DF7-94AE-2B9EE3BC42C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D23235F5-D87D-4DF7-94AE-2B9EE3BC42C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D23235F5-D87D-4DF7-94AE-2B9EE3BC42C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA30B192-0A66-4AC9-B956-85D39ECF854F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA30B192-0A66-4AC9-B956-85D39ECF854F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA30B192-0A66-4AC9-B956-85D39ECF854F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA30B192-0A66-4AC9-B956-85D39ECF854F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

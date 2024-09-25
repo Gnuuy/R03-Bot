@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    container_name: rabbit-bot
+    image: "rabbitmq:management"
+    ports:
+      - "5672:5672"
+      - "15672:15672" # RabbitMQ Management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: [ "CMD", "rabbitmqctl", "status" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - my-network
+
+  f-list-bot:
+    container_name: flist-bot-messenger
+    build:
+      context: .
+      dockerfile: ./MS-Messenger-Test/Dockerfile
+    depends_on:
+      - rabbitmq
+    networks:
+      - my-network
+
+  discord-bot:
+    container_name: discord-consumer
+    build:
+      context: .
+      dockerfile: ./MS-Discord/Dockerfile
+    image: discord-bot
+    depends_on:
+      - rabbitmq
+    networks:
+      - my-network
+  
+  talk-module:
+    container_name: talk-module
+    build:
+      context: .
+      dockerfile: ./TalkModule/Dockerfile
+    depends_on:
+      - rabbitmq
+    networks:
+      - my-network
+
+networks:
+  my-network:
